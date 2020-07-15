@@ -1,2 +1,21 @@
-<p>main-layout works!</p>
+<nav class="navbar bg-dark">
+  <h2>Online Shop</h2>
+  <ul>
+    <li routerLinkActive="active">
+      <a href="#">Россия</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#">Португалия</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#">Испания</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#">Бали</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">Cart</a>
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>
