@@ -1,1 +1,5 @@
-<p>main-page works!</p>
+<div *ngIf="products$ | async as products" class="dashboard">
+  <app-product *ngFor="let product of products" class="box" [product]="product">
+    {{product.title}}
+  </app-product>
+</div>
