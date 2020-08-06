@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiKey: "AIzaSyBoGxDNn1DJgXA7gg3MeJInuTwThvHzEtA"
+  apiKey: "AIzaSyBoGxDNn1DJgXA7gg3MeJInuTwThvHzEtA",
+  fbDbUrl: "https://friendlytrip-cdb88.firebaseio.com"
 };
 
 /*
