@@ -13,7 +13,7 @@
         <div>
           <h2>Цена: {{product.price}} р</h2>
 
-          <button class="btn btn-dark" [routerLink]="['/cart']">Добавить в корзину</button>
+          <button class="btn btn-dark" [routerLink]="['/cart']" (click)="addProduct(product)">Добавить в корзину</button>
         </div>
       </div>
 

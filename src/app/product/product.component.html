@@ -8,5 +8,5 @@
 
   <button [routerLink]="['/product', product.id]" class="btn btn-dark">Подробнее</button>
 
-  <button [routerLink]="['/cart']" class="btn btn-dark">Добавить в корзину</button>
+  <button [routerLink]="['/cart']" class="btn btn-dark" (click)="addProduct(product)">Добавить в корзину</button>
 </div>

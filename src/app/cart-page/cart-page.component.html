@@ -1,1 +1,21 @@
-<p>cart-page works!</p>
+<div class="container" *ngIf="cartProducts.length > 0; else empty">
+  <h2 class="text-center">Ваш заказ:</h2>
+  <table>
+    <tbody>
+      <tr *ngFor="let cartProduct of cartProducts; let i = index">
+        <td>{{ cartProduct.type }}</td>
+        <td>{{ cartProduct.title }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="removefromCart(cartProduct)">Удалить</button>
+        </td>
+        <td>{{ cartProduct.price }} р</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <b class="right">Всего: {{totalPrice}} р</b>
+</div>
+
+<ng-template #empty>
+  <h2 class="text-center">В корзине ничего нет</h2>
+</ng-template>
