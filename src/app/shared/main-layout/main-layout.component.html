@@ -2,16 +2,16 @@
   <h2>Online Shop</h2>
   <ul>
     <li routerLinkActive="active">
-      <a href="#">Россия</a>
+      <a (click)="setType('russia')">Россия</a>
     </li>
     <li routerLinkActive="active">
-      <a href="#">Португалия</a>
+      <a (click)="setType('portugal')">Португалия</a>
     </li>
     <li routerLinkActive="active">
-      <a href="#">Испания</a>
+      <a (click)="setType('spain')">Испания</a>
     </li>
     <li routerLinkActive="active">
-      <a href="#">Бали</a>
+      <a (click)="setType('bali')">Бали</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['/cart']">Cart</a>
