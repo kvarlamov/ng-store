@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {map} from 'rxjs/operators';
-import {FbResponse, Product} from './interfaces';
+import { FbResponse } from './interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,8 @@ export class OrderService {
       }));
   }
 
-  /*getAll() {
-    return this.http.get(`${environment.fbDbUrl}/products.json`)
+  getAll() {
+    return this.http.get(`${environment.fbDbUrl}/orders.json`)
       .pipe( map (res => {
         return Object.keys(res)
           .map(key => ({
@@ -35,6 +35,6 @@ export class OrderService {
   }
 
   remove(id) {
-    return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`)
-  }*/
+    return this.http.delete(`${environment.fbDbUrl}/orders/${id}.json`);
+  }
 }

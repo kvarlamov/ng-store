@@ -1,1 +1,39 @@
-<p>orders-page works!</p>
+<div *ngIf="orders.length; else noOrders">
+  <h2 class="text-center">Заказы</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Телефон</th>
+        <th>Имя</th>
+        <th>Адрес</th>
+        <th>Заказ</th>
+        <th>Цена</th>
+        <th>Статус</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.date | date: 'medium'}}</td>
+        <td>{{order.phone}}</td>
+        <td>{{order.name}}</td>
+        <td>{{order.address}}</td>
+        <td>
+          <div *ngFor="let product of order.orders">{{product.title}}</div>
+        </td>
+        <td>
+          <div class="text-center">{{order.price}}р</div>
+          <div class="text-center">{{order.payment}}</div>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="remove(order.id)">Заказ выполнен</button>
+        </td>
+      </tr>
+      </tbody>
+     </table>
+</div>
+
+<ng-template #noOrders>
+  <p class="text-center">Заказов нет</p>
+</ng-template>
