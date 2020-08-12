@@ -14,6 +14,41 @@
   </table>
   <hr>
   <b class="right">Всего: {{totalPrice}} р</b>
+
+  <h2 class="text-center">Доставка:</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-control">
+      <label for="name">Имя</label>
+      <input id="name" type="name" formControlName="name">
+      <div *ngIf="form.get('name').touched && form.get('name').invalid" class="validation">
+        <small *ngIf="form.get('name').errors.required">Введите Ваше имя</small>
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="phone">Номер телефона</label>
+      <input id="phone" type="phone" formControlName="phone">
+      <div *ngIf="form.get('phone').touched && form.get('phone').invalid" class="validation">
+        <small *ngIf="form.get('phone').errors.required">Введите ваш номер телефона</small>
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="address">Адрес</label>
+      <input id="address" type="address" formControlName="address">
+      <div *ngIf="form.get('address').touched && form.get('address').invalid" class="validation">
+        <small *ngIf="form.get('address').errors.required">Введите ваш адрес</small>
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="payment">Форма оплаты:</label>
+      <select formControlName="payment" >
+        <option value="cash">Наличными</option>
+        <option value="card">Картой</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Добавить</button>
+  </form>
 </div>
 
 <ng-template #empty>
