@@ -8,7 +8,7 @@
       <div class="item text-center">
         <h2>{{product.title}}</h2>
         <div>
-          <quill-view-html [content]="product.photo"></quill-view-html>
+          <quill-editor [(ngModel)]="product.photo" [modules]="{toolbar: false}" [styles] = "{ border: '0px'}"></quill-editor>
         </div>
         <div>
           <h2>Цена: {{product.price}} р</h2>
@@ -20,7 +20,7 @@
       <div class="item">
         <h2>Информация:</h2>
         <div>
-          <quill-view-html [content]="product.info"></quill-view-html>
+          <quill-editor [(ngModel)]="product.info" [modules]="{toolbar: false}" [styles] = "{ border: '0px'}"></quill-editor>
         </div>
       </div>
     </div>

@@ -59,7 +59,6 @@ export class CartPageComponent implements OnInit {
       date: new Date()
     }
 
-    console.log(this.form);
     this.orderServ.create(order).subscribe( res => {
       this.form.reset();
       this.added = 'Заказ оформлен'

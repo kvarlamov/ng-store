@@ -2,3 +2,11 @@
   margin: 1rem .5rem 0;
   width: 80%;
 }
+
+.custom-image:after{
+  padding: 0;
+}
+
+div.ql-editor > p > img {
+  vertical-align: bottom;
+}

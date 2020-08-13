@@ -1,7 +1,9 @@
 <div class="text-center">
   <h2>{{ product.title }}</h2>
   <div class="flex-center">
-    <quill-view-html [content]="product.photo"></quill-view-html>
+    <quill-editor [(ngModel)]="product.photo"
+                  [modules]="{toolbar: false}"
+                  [styles] = "{ border: '0px'}"></quill-editor>
   </div>
 
   <h2>Цена: {{product.price}} р</h2>

@@ -46,7 +46,6 @@ export class EditPageComponent implements OnInit {
 
     this.submitted = true;
 
-    console.log(this.form);
     this.productServ.update({
       ...this.product,
       type: this.form.value.type,
